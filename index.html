@@ -39,6 +39,14 @@
     <script type="text/javascript" src="js/js/custom.js"></script>
 
 
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="faq.css">
+
 
 
 </head>
@@ -56,18 +64,18 @@
 
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
-            <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about</a>
+            <a data-aos="zoom-in-left" data-aos-delay="450" href="#footer">about</a>
             <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">symptoms</a>
-            <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">blogs</a>
+            <a data-aos="zoom-in-left" data-aos-delay="750" href="#blogs">blogs</a>
             <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">doctors</a>
-            <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">preventions</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1150" href="#services">preventions</a>
             <a data-aos="zoom-in-left" data-aos-delay="1300">
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
             </a>
             <a href="#" onclick="signOut();">Sign out</a>
         </nav>
 
-        <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btnn">book now</a>
+        <!-- <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btnn">book now</a> -->
 
     </header>
 
@@ -100,33 +108,46 @@
                     <form action="" method="GET" class="hidden">
 
                         <select data-conv-question="Hello! How can I help you" name="category">
-                            <option value="WebDevelopment">Website Development ?</option>
-                            <option value="DigitalMarketing">Digital Marketing ?</option>
+                            <option value="WebDevelopment">To Take Doctor's Appointment ?</option>
+                            <option value="DigitalMarketing">To Solve Doubt's ?</option>
                         </select>
 
                         <div data-conv-fork="category">
                             <div data-conv-case="WebDevelopment">
                                 <input type="text" name="domainName"
-                                    data-conv-question="Please, tell me your domain name">
+                                    data-conv-question="May I know your name...">
                             </div>
                             <div data-conv-case="DigitalMarketing" data-conv-fork="first-question2">
                                 <input type="text" name="companyName"
-                                    data-conv-question="Please, enter your company name">
+                                    data-conv-question="What's your gender?">
                             </div>
                         </div>
 
-                        <input type="text" name="name" data-conv-question="Please, Enter your name">
-
-                        <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you."
-                            data-no-answer="true">
+                        <input type="text" name="name" data-conv-question="Please, Enter your Gender">
+                        <input type="text" data-conv-question="Hi {domainName}, <br> It's a pleasure to meet you."
+                        data-no-answer="true">
+                        
 
                         <input data-conv-question="Enter your e-mail"
                             data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                             type="email" name="email" required placeholder="What's your e-mail?">
 
-                        <select data-conv-question="Please Conform">
-                            <option value="Yes">Conform</option>
-                        </select>
+                        <input data-conv-question="What's Your Age?"
+                            
+                            type="number" name="number" required placeholder="What's your Age?">
+
+                        <input data-conv-question="Enter Your Phone Number"
+                            
+                            type="email" name="email" required placeholder="Enter Your Phone Number?">
+
+                            <select data-conv-question="Please Cofirm Your Entered Data?<br> If it is correct Click on Confirn or else reset!!!" name="category">
+                                <option value="Confirm" onclick="funct()"> Confirm</option>
+                                <option value="Reset">Reset</option>
+                            </select>
+
+                        <!-- <select data-conv-question="Please Confirm">
+                            <option value="Yes">Confirm</option>
+                        </select> -->
 
                     </form>
                 </div>
@@ -761,8 +782,52 @@
     <!-- banner section ends -->
 
     <!-- footer section starts  -->
+    <div class="heading">
+        <!-- <span>our services</span> -->
+        <h1>FAQ's</h1>
+    </div>
+    <section class="faq" style="height: 70%;">
+        
+        <div class="container">
+           <div class="accordion">
+              <div class="accordion-item" id="q1">
+                <a class="accordion-link" href="#q1"> Is anemia curable?
+                  <i class="lni lni-chevron-down"></i>
+                  <i class="lni lni-chevron-up"></i>
+                </a>
+                <div class="ans">
+                  <p> Yes, anemia is curable even though it usually depends on the type of anemia you have. The most common type of anemia is iron deficiency anemia. This type of anemia is treatable with iron supplements as well as blood transfusions.<br>
+                    Anemia due to a deficiency of vitamin B12 or folate is also curable.
+                    </p>
+                </div>
+              </div>
+   
+              <div class="accordion-item" id="q2">
+               <a class="accordion-link" href="#q2"> Is anemia chronic?
+                 <i class="lni lni-chevron-down"></i>
+                 <i class="lni lni-chevron-up"></i>
+               </a>
+               <div class="ans">
+                   <p> Anemia can either be acute or chronic. If anemia persists for more than six months or even longer, anemia is considered to be chronic. The normal life span of erythrocytes is about 120 days, so it takes some time for anemia to develop and become noticeable.</p>
+               </div>
+             </div>
+   
+             <div class="accordion-item" id="q3">
+               <a class="accordion-link" href="#q3">Is anemia a symptom of multiple sclerosis?
+                 <i class="lni lni-chevron-down"></i>
+                 <i class="lni lni-chevron-up"></i>
+               </a>
+               <div class="ans">
+                 <p> Multiple sclerosis is a disease affecting the central nervous system. This disease is characterized by an autoimmune damage of the myelin sheath and other structures of nervous system leading to problems with nerve impulse conduction. Multiple sclerosis is a chronic disease that has no cure. Anemia is not directly linked to multiple sclerosis.</p>
+               </div>
+             </div>
+           </div>
+        </div>
+      </section>
+    </section>
+  </section>
 
-    <section class="footer">
+    <section class="footer" id="footer">
 
         <div class="box-container">
 
