@@ -144,35 +144,37 @@
 
     <section class="book-form" id="book-form">
 
-        <form action="">
+        
+        <form action="index.php" method="post">
             <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
                 <span>Name</span>
-                <input type="text" placeholder="type your name" value="">
+                <input type="text" id="name" name="name" placeholder="type your name" value="">
             </div>
             <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
                 <span>Appointment Date</span>
-                <input type="date" value="">
+                <input type="date" id="date" name="date" value="">
             </div>
             <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
                 <span>Age</span>
-                <input type="number" placeholder="age" value="">
+                <input type="number" id="age" name="age" placeholder="age" value="">
             </div>
             <div data-aos="zoom-in" data-aos-delay="600" class="inputBox">
                 <span>SEX</span>
                 <!-- <input type="radio" value="MALE" id="SEX" name="SEX">
                 <input type="radio" value="FEMALE" id="SEX" name="SEX">
                 <input type="radio" value="OTHERS" id="SEX" name="SEX"> -->
-                <input type="text" placeholder="Male,Female,Others?" value="">
+                <input type="text" id="sex" name="sex" placeholder="Male,Female,Others?" value="">
             </div>
             <div data-aos="zoom-in" data-aos-delay="750" class="inputBox">
                 <span>Phone number</span>
-                <input type="number" placeholder="enter your contact no." value="">
+                <input type="number" id="phoneno" name="phoneno" placeholder="enter your contact no." value="">
             </div>
             <div data-aos="zoom-in" data-aos-delay="900" class="inputBox">
                 <span>Email ID</span>
-                <input type="email" placeholder="enter your email" value="">
+                <input data-aos="zoom-in" data-aos-delay="900" class="inputBox" type="email" id="email" name="email" placeholder="enter your email" value="">
             </div>
-            <input data-aos="zoom-in" data-aos-delay="1050" type="submit" value="Confirm" class="btnn">
+            <!-- <input data-aos="zoom-in" data-aos-delay="1050" type="submit" value="Confirm" class="btnn"> -->
+            <button data-aos="zoom-in" data-aos-delay="1050" class="btnn">Confirm</button>
         </form>
 
     </section>
